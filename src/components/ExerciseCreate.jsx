@@ -32,7 +32,7 @@ function ExerciseCreate() {
         console.log(selectedValues);
         setFormData({
             ...formData,
-            categories: selectedOptions, // Update met een array van geselecteerde ID's
+            categories: selectedValues, // Update met een array van geselecteerde ID's
         });
     };
 
@@ -144,7 +144,7 @@ function ExerciseCreate() {
                         onChange={handleCategoryChange}
                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
                         {categories?.map((category) => (
-                            <option key={category._id} name="categories[]" value={category._id}>
+                            <option key={category.id} name="categories[]" value={category.id}>
                                 {category.name}
                             </option>
                         ))}

@@ -14,7 +14,6 @@ function Exercises() {
                 });
                 const data = await response.json();
                 setExercises(data.items);
-                // setIsLoading(true);
             } catch (error) {
                 console.error('Fout bij het ophalen van het product:', error);
             }
@@ -31,7 +30,7 @@ function Exercises() {
 
 
     return(
-        <div className="grid grid-cols-2 grid-rows-2 gap-8 m-auto w-1/2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-8 m-auto w-1/2 ">
             {exerciseDetails}
         </div>
     )

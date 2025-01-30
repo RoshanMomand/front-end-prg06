@@ -5,7 +5,7 @@ function Layout() {
     return (
         <div>
             <header className="sticky z-10 top-0 bg-[#242424]">
-                <nav className="group flex justify-evenly items-center">
+                <nav className="group flex justify-evenly items-center pb-10">
                     <>
                         <div className="flex items-center">
                             <img src="/src/img.png" alt="" className=" w-[5vw]"/>
