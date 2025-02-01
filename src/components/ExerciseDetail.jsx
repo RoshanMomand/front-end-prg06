@@ -37,7 +37,6 @@ function ExerciseDetail() {
     useEffect(() => {
         async function fetchExercise() {
             try {
-                // setIsLoading(false);
                 const response = await fetch('http://145.24.223.145:8010/exercises/' + id, {
                     method: 'GET',
                     headers: {
@@ -46,7 +45,7 @@ function ExerciseDetail() {
                 });
                 const data = await response.json();
                 setExercise(data);
-                // setIsLoading(true);
+                console.log(data)
             } catch (error) {
                 console.error('Fout bij het ophalen van het product:', error);
             }
@@ -67,7 +66,7 @@ function ExerciseDetail() {
                                 className="text-white bg-[#FFA500] hover:text-[#FFA500] hover:bg-white border-4 border-[#FFA500] text-lg font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition-all duration-300 ease-in-out"
                                 onClick={deleteExercise}>Delete
                             </button>
-                            {/* Hier geef je de id mee van het enkele item. De id geef je bij Chesspot detail al door bij het linken.*/}
+                            {/* Hier geef je de id mee van het enkele item. De id geef je bij Exercise detail al door bij het linken.*/}
                             <Link to={`/exercises/${id}/edit`}
                                   className="text-white bg-[#FFA500] hover:text-[#FFA500] hover:bg-white border-4 border-[#FFA500] text-lg font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition-all duration-300 ease-in-out">Update</Link>
                         </div>
